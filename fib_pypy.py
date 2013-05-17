@@ -40,7 +40,6 @@ class bigint:
             self._length = i
 
     def has(self, d):
-        length = d._length
         i = 0
         j = 0
         while i < self._length:
@@ -50,7 +49,7 @@ class bigint:
             else:
                 i = i - j + 1
                 j = 0
-            if j == length:
+            if j == d._length:
                 return True
         return False
 
